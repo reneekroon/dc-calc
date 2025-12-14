@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decathlon Points Calculator</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Decathlon Points Calculator</h1>
+    <p class="subtitle">Calculate points using IAAF scoring tables</p>
+
+    <div class="events-grid">
+      <!-- Day 1 Events -->
+      <div class="event-card">
+        <div class="event-header">
+          <span class="event-name">100m</span>
+          <span class="event-day">Day 1</span>
+        </div>
+        <div class="input-group">
+          <label>Time (seconds)</label>
+          <input type="number" step="0.01" id="m100" placeholder="e.g., 10.85">
+        </div>
+        <div class="points-display" id="points-m100">0 pts</div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-header">
+          <span class="event-name">Long Jump</span>
+          <span class="event-day">Day 1</span>
+        </div>
+        <div class="input-group">
+          <label>Distance (meters)</label>
+          <input type="number" step="0.01" id="longjump" placeholder="e.g., 7.52">
+        </div>
+        <div class="points-display" id="points-longjump">0 pts</div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-header">
+          <span class="event-name">Shot Put</span>
+          <span class="event-day">Day 1</span>
+        </div>
+        <div class="input-group">
+          <label>Distance (meters)</label>
+          <input type="number" step="0.01" id="shotput" placeholder="e.g., 15.23">
+        </div>
+        <div class="points-display" id="points-shotput">0 pts</div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-header">
+          <span class="event-name">High Jump</span>
+          <span class="event-day">Day 1</span>
+        </div>
+        <div class="input-group">
+          <label>Height (meters)</label>
+          <input type="number" step="0.01" id="highjump" placeholder="e.g., 2.05">
+        </div>
+        <div class="points-display" id="points-highjump">0 pts</div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-header">
+          <span class="event-name">400m</span>
+          <span class="event-day">Day 1</span>
+        </div>
+        <div class="input-group">
+          <label>Time (seconds)</label>
+          <input type="number" step="0.01" id="m400" placeholder="e.g., 47.79">
+        </div>
+        <div class="points-display" id="points-m400">0 pts</div>
+      </div>
+    </div>
+
+    <!-- Day 2 Events -->
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-header">
+          <span class="event-name">110m Hurdles</span>
+          <span class="event-day">Day 2</span>
+        </div>
+        <div class="input-group">
+          <label>Time (seconds)</label>
+          <input type="number" step="0.01" id="hurdles" placeholder="e.g., 14.20">
+        </div>
+        <div class="points-display" id="points-hurdles">0 pts</div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-header">
+          <span class="event-name">Discus</span>
+          <span class="event-day">Day 2</span>
+        </div>
+        <div class="input-group">
+          <label>Distance (meters)</label>
+          <input type="number" step="0.01" id="discus" placeholder="e.g., 48.36">
+        </div>
+        <div class="points-display" id="points-discus">0 pts</div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-header">
+          <span class="event-name">Pole Vault</span>
+          <span class="event-day">Day 2</span>
+        </div>
+        <div class="input-group">
+          <label>Height (meters)</label>
+          <input type="number" step="0.01" id="polevault" placeholder="e.g., 5.10">
+        </div>
+        <div class="points-display" id="points-polevault">0 pts</div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-header">
+          <span class="event-name">Javelin</span>
+          <span class="event-day">Day 2</span>
+        </div>
+        <div class="input-group">
+          <label>Distance (meters)</label>
+          <input type="number" step="0.01" id="javelin" placeholder="e.g., 64.72">
+        </div>
+        <div class="points-display" id="points-javelin">0 pts</div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-header">
+          <span class="event-name">1500m</span>
+          <span class="event-day">Day 2</span>
+        </div>
+        <div class="input-group">
+          <label>Time (mm:ss.ss)</label>
+          <input type="text" id="m1500" placeholder="e.g., 4:20.46">
+        </div>
+        <div class="points-display" id="points-m1500">0 pts</div>
+      </div>
+    </div>
+
+    <div class="total-section">
+      <h2>Total Score</h2>
+      <div class="total-points" id="total-points">0</div>
+      <div class="buttons">
+        <button id="calc-btn" class="calc-btn">Calculate All</button>
+        <button id="reset-btn" class="reset-btn">Reset</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
